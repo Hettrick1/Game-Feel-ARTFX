@@ -7,7 +7,7 @@ public class CharacterMovement : MonoBehaviour
 {
     Rigidbody2D rb;
     private float accelerationSpeed = 80f;
-    private float decelerationSpeed = 70f;
+    private float decelerationSpeed = 80f;
     private float currentSpeed = 0f;
     private float maxSpeed = 12f;
 

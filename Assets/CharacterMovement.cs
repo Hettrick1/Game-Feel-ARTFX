@@ -6,10 +6,10 @@ using UnityEngine.UIElements;
 public class CharacterMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    private float accelerationSpeed = 80f;
-    private float decelerationSpeed = 80f;
+    private float accelerationSpeed = 60f;
+    private float decelerationSpeed = 60f;
     private float currentSpeed = 0f;
-    private float maxSpeed = 12f;
+    private float maxSpeed = 10f;
 
     private float gravityScale = 3;
     private float fallingGravityScale = 5;
@@ -30,12 +30,14 @@ public class CharacterMovement : MonoBehaviour
             if (!isGrounded)
             {
                 accelerationSpeed = 50f;
+                decelerationSpeed = 20f;
                 maxSpeed = 8f;
             }
             else
             {
-                accelerationSpeed = 80f;
-                maxSpeed = 12f;
+                accelerationSpeed = 60f;
+                decelerationSpeed = 60f;
+                maxSpeed = 10f;
             }
             currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, Time.deltaTime * accelerationSpeed);
             //currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed, maxSpeed);
@@ -45,12 +47,14 @@ public class CharacterMovement : MonoBehaviour
             if (!isGrounded)
             {
                 accelerationSpeed = 50f;
+                decelerationSpeed = 20f;
                 maxSpeed = 8f;
             }
             else
             {
-                accelerationSpeed = 80f;
-                maxSpeed = 12f;
+                accelerationSpeed = 60f;
+                decelerationSpeed = 60f;
+                maxSpeed = 10f;
             }
             currentSpeed = Mathf.MoveTowards(currentSpeed, -maxSpeed, Time.deltaTime * accelerationSpeed);
             //currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed, maxSpeed);

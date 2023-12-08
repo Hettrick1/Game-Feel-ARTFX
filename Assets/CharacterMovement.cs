@@ -37,8 +37,8 @@ public class CharacterMovement : MonoBehaviour
                 accelerationSpeed = 80f;
                 maxSpeed = 12f;
             }
-            currentSpeed = Mathf.MoveTowards(currentSpeed, accelerationSpeed, Time.deltaTime * accelerationSpeed);
-            currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed, maxSpeed);
+            currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, Time.deltaTime * accelerationSpeed);
+            //currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed, maxSpeed);
         }
         else if (Input.GetKey(KeyCode.A))
         {
@@ -52,8 +52,8 @@ public class CharacterMovement : MonoBehaviour
                 accelerationSpeed = 80f;
                 maxSpeed = 12f;
             }
-            currentSpeed = Mathf.MoveTowards(currentSpeed, -accelerationSpeed, Time.deltaTime * accelerationSpeed);
-            currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed, maxSpeed);
+            currentSpeed = Mathf.MoveTowards(currentSpeed, -maxSpeed, Time.deltaTime * accelerationSpeed);
+            //currentSpeed = Mathf.Clamp(currentSpeed, -maxSpeed, maxSpeed);
         }
         else
         {
